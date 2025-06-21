@@ -1,0 +1,17 @@
+export const fakeReturns = [
+  { returnId: "ab100", postalCode: "A1B 2C3", status: "eligible" },
+  { returnId: "xy101", postalCode: "X1Y 2Z3", status: "eligible" },
+  { returnId: "de102", postalCode: "L1M 2N3", status: "not eligible" },
+  { returnId: "rt103", postalCode: "H4J 5K6", status: "eligible" },
+  { returnId: "qw104", postalCode: "P7Q 8R9", status: "not eligible" },
+  { returnId: "zx105", postalCode: "S2T 3U4", status: "eligible" },
+  { returnId: "cv106", postalCode: "V5W 6X7", status: "eligible" },
+  { returnId: "bn107", postalCode: "Y8Z 9A1", status: "not eligible" },
+  { returnId: "mk108", postalCode: "B2C 3D4", status: "eligible" },
+  { returnId: "lp109", postalCode: "E5F 6G7", status: "eligible" },
+  { returnId: "ki110", postalCode: "I8J 9K1", status: "not eligible" },
+  { returnId: "uj111", postalCode: "L2M 3N4", status: "eligible" },
+  { returnId: "hg112", postalCode: "O5P 6Q7", status: "eligible" },
+  { returnId: "fd113", postalCode: "R8S 9T1", status: "not eligible" },
+  { returnId: "sa114", postalCode: "U2V 3W4", status: "eligible" },
+];
