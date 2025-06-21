@@ -4,6 +4,7 @@ import HomePage from "./HomePage";
 import SecondPage from "./SecondPage";
 import "./App.css";
 import Header from "./components/Header";
+import FinalPage from "../FinalPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/next" element={<SecondPage />} />
+        <Route path="/final" element={<FinalPage />} />
       </Routes>
     </Router>
   );
