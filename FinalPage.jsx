@@ -1,8 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function FinalPage() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { action = "return", productCategory = "Other" } = location.state || {};
+
+  const isClothing = productCategory.toLowerCase() === "clothing";
+
+  const message =
+    action === "replace" && isClothing
+      ? "Your replacement request for the clothing item has been submitted successfully."
+      : "Your return has been successfully processed.";
 
   const handleGoHome = () => {
     navigate("/");
@@ -28,9 +37,7 @@ export default function FinalPage() {
         <h1 className="text-3xl font-semibold text-gray-800 mb-2">
           Thank You!
         </h1>
-        <p className="text-lg text-gray-600 mb-6">
-          Your return has been successfully processed.
-        </p>
+        <p className="text-lg text-gray-600 mb-6">{message}</p>
         <button
           onClick={handleGoHome}
           className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-3 px-6 rounded-full shadow-md transition-all duration-300 hover:shadow-lg"

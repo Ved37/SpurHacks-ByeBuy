@@ -27,6 +27,27 @@ export default function HomePage() {
       return;
     }
 
+    // 👇 Inject product category manually
+    const productCategories = {
+      ab100: "Clothing",
+      xy101: "Clothing",
+      de102: "Other",
+      rt103: "Other",
+      qw104: "Other",
+      zx105: "Clothing",
+      cv106: "Other",
+      bn107: "Other",
+      mk108: "Clothing",
+      lp109: "Other",
+      ki110: "Other",
+      uj111: "Other",
+      hg112: "Other",
+      fd113: "Other",
+      sa114: "Clothing",
+    };
+    match.productCategory =
+      productCategories[match.returnId.toLowerCase()] || "Other";
+
     navigate("/next", { state: match });
   }
 
